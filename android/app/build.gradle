@@ -102,10 +102,12 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    assetPacks = [":fast_follow_asset_pack"]
 }
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
+    implementation 'com.google.android.play:asset-delivery:2.2.1'
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:flipper-integration")
 
