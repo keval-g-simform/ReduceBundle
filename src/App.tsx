@@ -37,12 +37,14 @@ function App(): React.JSX.Element {
       ) : (
         <Image
           source={{
-            uri: imageUri,
+            uri: `data:image/png;base64,${imageUri}`,
           }}
           style={styles.image}
         />
       )}
-      <Text style={styles.subTitle}>Image from React Native Asset folder</Text>
+      <Text style={styles.subTitle}>
+        {'Image from React Native Asset folder'}
+      </Text>
       <Image source={Asset.profile} style={styles.image} />
     </SafeAreaView>
   );
